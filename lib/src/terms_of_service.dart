@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:terms_sample/src/terms/terms1.dart';
+import 'package:terms_sample/src/terms/terms2.dart';
 
 class TermsOfService extends StatefulWidget {
   const TermsOfService({Key? key}) : super(key: key);
@@ -10,6 +11,7 @@ class TermsOfService extends StatefulWidget {
 
 class _TermsOfServiceState extends State<TermsOfService> {
   int index = 0;
+
   Widget _topMenu() {
     return Wrap(
       children: [
@@ -93,9 +95,14 @@ class _TermsOfServiceState extends State<TermsOfService> {
 
   Widget _bottomContentView() {
     return IndexedStack(
-      index: 0,
-      children: const [
-        Terms1Widget(),
+      index: index,
+      children: [
+        const Terms1Widget(),
+        const Terms2Widget(),
+        Container(),
+        Container(),
+        Container(),
+        Container(),
       ],
     );
   }
@@ -105,6 +112,7 @@ class _TermsOfServiceState extends State<TermsOfService> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        centerTitle: true,
         title: const Text('서비스 약관'),
       ),
       body: SingleChildScrollView(

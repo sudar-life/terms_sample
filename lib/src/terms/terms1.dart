@@ -27,7 +27,7 @@ class Terms1Widget extends StatelessWidget with CommonTermsStyle {
         const SizedBox(height: 10),
         description(
             "본 약관의 목적은 요기패스를 이용하는 데 필요한 '주식회사 위대한 상상(이하 '회사')'과 이용자 사이의 권리 및 의무,이용 조건 및 절차 등 요기패스 이용계약(이하 '이용계약')의 내용을 정하는 것입니다.",
-            tabIn: 2)
+            tabIn: 2),
       ],
     );
   }
